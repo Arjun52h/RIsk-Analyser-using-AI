@@ -7,4 +7,5 @@ Local MVP for a payment risk decision engine.
 npm install
 npm run dev
 
-No external API or database is required. Risk scores and explanations are generated locally and dynamically from synthetic transactions.
+Gemini api is required and should be added in .env.example 
+No  database is required. Risk scores and explanations are generated locally and dynamically from synthetic transactions.
