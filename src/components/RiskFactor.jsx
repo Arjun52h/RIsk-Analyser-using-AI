@@ -1,0 +1,1 @@
+export default function RiskFactor({f}){return <div className="factor"><span>!</span><div><b>{f.label}</b><small>{f.detail}</small></div><strong>+{f.points}</strong></div>}

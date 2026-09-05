@@ -1,0 +1,1 @@
+export default function Topbar({title}){return <header className="topbar"><div><div className="eyebrow">PAYMENT INTELLIGENCE</div><h1>{title}</h1></div><div className="merchant"><div className="avatar">M</div><div><b>Demo Merchant</b><small>Merchant Account</small></div></div></header>}

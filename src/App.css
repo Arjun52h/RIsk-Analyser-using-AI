@@ -1,0 +1,1048 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f6f7f9;
+  color: #161616;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 235px;
+  background: #101010;
+  color: #fff;
+  padding: 23px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px 32px;
+}
+
+.brandIcon {
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.brand b,
+.brand small,
+.merchant b,
+.merchant small {
+  display: block;
+}
+
+.brand b {
+  font-size: 18px;
+}
+
+.brand small {
+  font-size: 10px;
+  color: #999;
+}
+
+.nav {
+  width: 100%;
+  border: 0;
+  background: none;
+  color: #999;
+  padding: 11px 12px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  margin: 2px 0;
+}
+
+.nav:hover,
+.nav.active {
+  background: #242424;
+  color: #fff;
+}
+
+.engine {
+  margin-top: auto;
+  color: #999;
+  font-size: 11px;
+}
+
+.engine i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #31c48d;
+  margin-right: 7px;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.main {
+  margin-left: 235px;
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 82px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h1 {
+  font-size: 23px;
+  margin: 4px 0 0;
+}
+
+.content {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 38px;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: #888;
+  font-weight: 800;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.pad {
+  padding: 24px;
+}
+
+.panel h2 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.muted {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.empty {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 13px;
+  padding: 40px;
+  text-align: center;
+  color: #888;
+}
+
+/* =========================
+   MERCHANT / AVATAR
+========================= */
+
+.merchant {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.merchant b {
+  font-size: 12px;
+}
+
+.merchant small {
+  font-size: 10px;
+  color: #999;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.stat {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 13px;
+  padding: 19px;
+}
+
+.stat span,
+.stat small {
+  display: block;
+}
+
+.stat span {
+  font-size: 12px;
+  color: #777;
+}
+
+.stat b {
+  font-size: 28px;
+  display: block;
+  margin: 12px 0 4px;
+}
+
+.stat small {
+  font-size: 10px;
+  color: #999;
+}
+
+/* =========================
+   RISK HERO
+========================= */
+
+.riskHero {
+  background: #111;
+  color: #fff;
+  border-radius: 14px;
+  margin: 17px 0;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.riskHero h2 {
+  font-size: 42px;
+  margin: 6px 0;
+}
+
+.riskHero p {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.riskHero .eyebrow {
+  color: #999;
+}
+
+.ring {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.ring b {
+  font-size: 22px;
+}
+
+.ring span {
+  font-size: 9px;
+  color: #999;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.tableWrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #fafafa;
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 9px;
+  color: #999;
+  letter-spacing: 0.8px;
+}
+
+td {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+}
+
+td small {
+  display: block;
+  color: #999;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+/* =========================
+   RISK BADGES
+========================= */
+
+.riskInline {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.mini {
+  width: 52px;
+  height: 5px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.mini i {
+  display: block;
+  height: 100%;
+  background: #111;
+}
+
+.badge {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.allow {
+  background: #e8f7f0;
+  color: #16835b;
+}
+
+.review {
+  background: #fff4d8;
+  color: #966900;
+}
+
+.block {
+  background: #ffe8e8;
+  color: #c23c3c;
+}
+
+/* =========================
+   TWO COLUMN LAYOUT
+========================= */
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.smallPanel {
+  margin-top: 14px;
+  padding: 20px;
+}
+
+/* =========================
+   MIX / ONLINE
+========================= */
+
+.mix {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.mix div {
+  flex: 1;
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.mix small {
+  display: block;
+  color: #999;
+  font-size: 9px;
+}
+
+.mix b {
+  font-size: 22px;
+}
+
+.online {
+  margin-top: 17px;
+  font-size: 12px;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.pageTitle {
+  margin-bottom: 20px;
+}
+
+.pageTitle h2 {
+  font-size: 26px;
+  margin: 5px 0;
+}
+
+.pageTitle p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.toolbar input {
+  width: 330px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: 0;
+}
+
+.filter {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 8px 11px;
+  font-size: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.filter.active {
+  background: #111;
+  color: #fff;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-bottom: 18px;
+  color: #666;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* =========================
+   INVESTIGATION
+========================= */
+
+.investGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 14px;
+}
+
+.bigScore {
+  font-size: 68px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.bigScore small {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.track {
+  height: 7px;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.track i {
+  display: block;
+  height: 100%;
+  background: #111;
+}
+
+.decision {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 17px 0;
+  font-size: 10px;
+  color: #888;
+  font-weight: 700;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #eee;
+}
+
+.details div {
+  padding: 13px 0;
+}
+
+.details small,
+.details b {
+  display: block;
+}
+
+.details small {
+  font-size: 9px;
+  color: #999;
+}
+
+.details b {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* =========================
+   RISK FACTORS
+========================= */
+
+.factor {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid #eee;
+}
+
+.factor > span {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #ffe8e8;
+  color: #c33;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.factor div {
+  flex: 1;
+}
+
+.factor b,
+.factor small {
+  display: block;
+}
+
+.factor b {
+  font-size: 12px;
+}
+
+.factor small {
+  font-size: 10px;
+  color: #999;
+  margin-top: 3px;
+}
+
+.factor > strong {
+  color: #c33;
+  font-size: 11px;
+}
+
+/* =========================
+   RISK INTELLIGENCE
+========================= */
+
+.lower {
+  margin-top: 14px;
+}
+
+.aiTitle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+}
+
+.explain {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #555;
+}
+
+.recommend {
+  background: #f5f5f5;
+  border-radius: 9px;
+  padding: 16px;
+  margin-top: 18px;
+}
+
+.recommend h2 {
+  font-size: 16px;
+}
+
+.note {
+  margin-top: 18px;
+  padding: 11px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  font-size: 10px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* =========================
+   RULES
+========================= */
+
+.rules {
+  padding: 5px 22px;
+}
+
+.rule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.rule:last-child {
+  border: 0;
+}
+
+.rule b,
+.rule small {
+  display: block;
+}
+
+.rule b {
+  font-size: 13px;
+}
+
+.rule small {
+  font-size: 10px;
+  color: #999;
+  margin-top: 3px;
+}
+
+/* =========================
+   THRESHOLDS
+========================= */
+
+.thresholds {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.thresholds div {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 17px;
+}
+
+.thresholds b,
+.thresholds span {
+  display: block;
+}
+
+.thresholds b {
+  font-size: 21px;
+}
+
+.thresholds span {
+  font-size: 9px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* =========================
+   RESULT / CHART
+========================= */
+
+.result-count {
+  font-size: 10px;
+  color: #999;
+  margin: -5px 0 10px;
+}
+
+.chartPanel {
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.bars {
+  margin-top: 18px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 58px 1fr 30px;
+  gap: 10px;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 10px;
+}
+
+.barBg {
+  height: 9px;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.barBg i {
+  display: block;
+  height: 100%;
+  background: #111;
+  border-radius: 8px;
+}
+
+.barBg i.review {
+  background: #b48622;
+}
+
+.barBg i.block {
+  background: #c44;
+}
+
+.signal {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 0;
+  border-top: 1px solid #eee;
+  font-size: 11px;
+}
+
+/* =========================
+   SIMULATOR
+========================= */
+
+.simGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.simGrid label {
+  display: block;
+  font-size: 11px;
+  color: #555;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.simGrid label b {
+  float: right;
+  color: #111;
+}
+
+.simGrid input[type="range"] {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  accent-color: #111;
+}
+
+.simScore {
+  font-size: 70px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.simScore small {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.simResult h3 {
+  font-size: 12px;
+  margin: 23px 0 7px;
+}
+
+/* =========================
+   CSV UPLOAD
+========================= */
+
+.uploadPanel {
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.uploadPanel > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.uploadIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  display: grid;
+  place-items: center;
+}
+
+.uploadPanel p {
+  font-size: 10px;
+  color: #888;
+  margin: 5px 0 0;
+}
+
+.uploadActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  border-radius: 7px;
+  padding: 9px 12px;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.primaryBtn {
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+}
+
+.secondaryBtn {
+  background: #fff;
+  color: #222;
+  border: 1px solid #ddd;
+}
+
+.uploadMsg,
+.uploadError {
+  width: 100%;
+  font-size: 10px;
+  padding: 9px 11px;
+  border-radius: 7px;
+}
+
+.uploadMsg {
+  background: #e8f7f0;
+  color: #16835b;
+}
+
+.uploadError {
+  background: #ffe8e8;
+  color: #c23c3c;
+}
+
+.csvHint {
+  width: 100%;
+  font-size: 9px;
+  color: #999;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 68px;
+  }
+
+  .brand div:last-child,
+  .nav span,
+  .engine {
+    display: none;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .main {
+    margin-left: 68px;
+  }
+
+  .content {
+    padding: 22px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .investGrid,
+  .two {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar input {
+    width: 100%;
+  }
+
+  .merchant {
+    display: none;
+  }
+
+  .simGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .uploadActions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .uploadActions button {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+
+
+/* ================================
+   GEMINI AI
+================================ */
+
+.ai-button {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.ai-button:hover {
+  opacity: 0.9;
+}
+
+.ai-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ai-analysis-card {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.ai-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ai-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #6b7280;
+}
+
+.ai-header h2 {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.ai-response {
+  margin-top: 18px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.ai-error {
+  margin-top: 15px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-size: 13px;
+}

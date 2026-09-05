@@ -1,0 +1,1 @@
+export default function RiskBadge({decision}){return <span className={"badge "+decision.toLowerCase()}>{decision}</span>}
